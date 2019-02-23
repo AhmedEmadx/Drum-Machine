@@ -1,0 +1,51 @@
+#drum-machine {
+	background: greenyellow;
+	border: 1 bx solid greenyellow;
+	width: 660px;
+	margin: 270px 300px 0px 270px;
+	border-radius: 1%;
+}
+.key {
+	flex-wrap: wrap;
+	display: flex;
+}
+.drum-pad {
+	background: white;
+	margin: 10px;
+	padding:12px;
+	width: 80px;
+	height: 80px;
+	font-size: 30px;
+	border-radius: 10%;
+	text-align: center;
+	cursor: pointer;
+}
+.man-key{
+	margin: 10px 0px 0px 0px;
+	font-size: 18px;
+	font-family: bold;
+	text-align: center;
+}
+.box {
+	background: black;
+	height: 20px;
+	width: 20%;
+	margin-left: 120px;
+	cursor: pointer;
+}
+.x{
+	background: gray;
+	width: 50%;
+	height: 20px;
+	border: 2px solid black;
+	float: left;
+}
+#display {
+	height: 50px;
+	width: 200px;
+	margin: 20px 50px;
+	text-align: center;
+	font-size: 16px;
+	padding-top: 14px;
+	background: rgb(255, 255, 255);
+}
