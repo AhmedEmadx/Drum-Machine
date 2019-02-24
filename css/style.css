@@ -7,12 +7,13 @@ body {
 	width: 670px;
 	margin: auto;
 	margin-top: 20%;
-	border-radius: 1%;
+	border-radius: 2%;
 	color: rgb(235, 209, 209);
 }
 .key {
 	flex-wrap: wrap;
 	display: flex;
+	border-right: 1px solid rgb(253, 119, 213);
 }
 .drum-pad {
 	background: rgb(231, 53, 136);
@@ -20,11 +21,12 @@ body {
 	margin: 10px;
 	padding:12px;
 	width: 80px;
-	height: 80px;
+	height: 78px;
 	font-size: 30px;
 	border-radius: 10%;
 	text-align: center;
 	cursor: pointer;
+	box-shadow: rgb(109, 109, 109) 3px 3px 5px;
 }
 .man-key{
 	margin: 10px 0px 0px 0px;
