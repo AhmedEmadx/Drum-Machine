@@ -26,7 +26,7 @@ class App extends React.Component {
 		this.keyCC = this.keyCC.bind(this);
 		this.handelPower = this.handelPower.bind(this);
 		this.handelBank = this.handelBank.bind(this);
-		this.highVolume = this.highVolume.bind(this);
+		
 		this.handleKeyPress = this.handleKeyPress.bind(this);
 	}
 	componentDidMount() {
@@ -211,10 +211,10 @@ class App extends React.Component {
 			ring: 'Snare'
 		});
 	}
-	highVolume(){
-		var v = document.querySelector('#v');
-		v.addEventListener("change", setvolume , false);
-	}
+	
+		
+		
+	
 	
 	render() {
 		if(this.state.power){
@@ -268,9 +268,9 @@ class App extends React.Component {
 									</div>
 								</div>
 								<div id='display'>{this.state.ring}</div>
-								<div>
-									<input id='v' type='range' min='0' max='100' value='1' step='1' onChange={this.highVolume}></input>
-								</div>
+								
+									
+								
 								<div>
 									<p className='man-key'><b>Bank</b></p>
 									<div className='box' onClick={this.handelBank}>
@@ -331,9 +331,9 @@ class App extends React.Component {
 									</div>
 								</div>
 								<div id='display'>{this.state.ring}</div>
-								<div>
-									<input id='v' type='range' min='0' max='100' value='1' step='1' onChange={this.highVolume}></input>
-								</div>
+								
+									
+								
 								<div>
 									<p className='man-key'><b>Bank</b></p>
 									<div className='box' onClick={this.handelBank}>
