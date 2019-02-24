@@ -1,16 +1,22 @@
+body {
+	background: rgb(44, 43, 43);
+}
 #drum-machine {
-	background: greenyellow;
-	border: 1 bx solid greenyellow;
-	width: 660px;
-	margin: 270px 300px 0px 270px;
+	background: rgb(92, 20, 92);
+	border: 3px solid rgb(253, 119, 213);
+	width: 670px;
+	margin: auto;
+	margin-top: 20%;
 	border-radius: 1%;
+	color: rgb(235, 209, 209);
 }
 .key {
 	flex-wrap: wrap;
 	display: flex;
 }
 .drum-pad {
-	background: white;
+	background: rgb(231, 53, 136);
+	color: rgb(216, 215, 215);
 	margin: 10px;
 	padding:12px;
 	width: 80px;
@@ -27,7 +33,7 @@
 	text-align: center;
 }
 .box {
-	background: black;
+	background: rgb(231, 53, 136);
 	height: 20px;
 	width: 20%;
 	margin-left: 120px;
@@ -37,7 +43,7 @@
 	background: gray;
 	width: 50%;
 	height: 20px;
-	border: 2px solid black;
+	border: 2px solid rgb(231, 53, 136);
 	float: left;
 }
 #display {
@@ -47,5 +53,12 @@
 	text-align: center;
 	font-size: 16px;
 	padding-top: 14px;
-	background: rgb(255, 255, 255);
+	background: rgb(231, 53, 136);
+	color: rgb(216, 215, 215);
+}
+#v {
+	width: 65%;
+	background: rgb(231, 53, 136);
+	color: rgb(216, 215, 215);
+	margin: auto
 }
