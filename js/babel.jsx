@@ -27,7 +27,35 @@ class App extends React.Component {
 		this.handelPower = this.handelPower.bind(this);
 		this.handelBank = this.handelBank.bind(this);
 		this.highVolume = this.highVolume.bind(this);
+		this.handleKeyPress = this.handleKeyPress.bind(this);
 	}
+	componentDidMount() {
+		document.addEventListener("keydown", this.handleKeyPress)
+	}
+	componentWillUnmount() {
+		document.removeEventListener("keydown", this.handleKeyPress)
+	}
+	handleKeyPress(event) {
+		if (event.keyCode === 81) {
+			this.keyQ();
+		}else if(event.keyCode === 87){
+			this.keyW();
+		}else if(event.keyCode === 69){
+			this.keyE();
+		}else if(event.keyCode === 65){
+			this.keyA();
+		}else if(event.keyCode === 83){
+			this.keyS();
+		}else if(event.keyCode === 68){
+			this.keyD();
+		}else if(event.keyCode === 90){
+			this.keyZ();
+		}else if(event.keyCode === 88){
+			this.keyX();
+		}else if(event.keyCode === 67){
+			this.keyC();
+		}
+	  }
 	handelPower(){
 		if(this.state.power == true){
 			this.setState({
@@ -62,7 +90,6 @@ class App extends React.Component {
 		this.setState({
 			ring: 'Heater 1'
 		});
-		var keyCode = 81;
 	}
 	keyW() {
 		let w = document.querySelector('#w');
@@ -70,7 +97,6 @@ class App extends React.Component {
 		this.setState({
 			ring: 'Heater 2'
 		});
-		var keyCode = 87;
 	}
 	keyE() {
 		let e = document.querySelector('#e');
@@ -78,7 +104,6 @@ class App extends React.Component {
 		this.setState({
 			ring: 'Heater 3'
 		});
-		var keyCode = 69;
 	}
 	keyA() {
 		let a = document.querySelector('#a');
@@ -86,7 +111,6 @@ class App extends React.Component {
 		this.setState({
 			ring: 'Heater 4'
 		});
-		var keyCode = 65;
 	}
 	keyS() {
 		let s = document.querySelector('#s');
@@ -94,7 +118,6 @@ class App extends React.Component {
 		this.setState({
 			ring: 'Clap'
 		});
-		var keyCode = 83;
 	}
 	keyD() {
 		let d = document.querySelector('#d');
@@ -102,7 +125,7 @@ class App extends React.Component {
 		this.setState({
 			ring: 'Open HH'
 		});
-		var keyCode = 68;
+
 	}
 	keyZ() {
 		let z = document.querySelector('#z');
@@ -110,15 +133,13 @@ class App extends React.Component {
 		this.setState({
 			ring: 'Kick n\' Hat'
 		});
-		var keyCode = 90;
 	}
 	keyX() {
 		let x = document.querySelector('#x');
 		x.play();
 		this.setState({
 			ring: 'Kick'
-		});
-		var keyCode = 88;		
+		});		
 	}
 	keyC() {
 		let c = document.querySelector('#c');
@@ -126,7 +147,6 @@ class App extends React.Component {
 		this.setState({
 			ring: 'Closed HH'
 		});
-		var keyCode = 67;
 	}
 	keyQQ() {
 		let qq = document.querySelector('#q');
@@ -195,6 +215,7 @@ class App extends React.Component {
 		var v = document.querySelector('#v');
 		v.addEventListener("change", setvolume , false);
 	}
+	
 	render() {
 		if(this.state.power){
 			if(this.state.bank){
@@ -202,7 +223,7 @@ class App extends React.Component {
 					<div className='container machine'>
 						<div className='row' id='drum-machine'>
 							<div className='col-lg-6 col-md-6 col-sm-6 col-xs-6 key'>
-								<div className='drum-pad' id='1' onClick={this.keyQ}>
+								<div className='drum-pad' id='1' onClick={this.keyQ} onKeyPress={this.handleKeyPress}>
 									<audio className='clip' id='q' src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3">
 									</audio>Q
 								</div>
